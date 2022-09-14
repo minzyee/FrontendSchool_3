@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>모두의 HTML/CSS</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<!-- header 시작 -->
+		<header id="header">
+			<div class="inner header">
+				<h1 class="site-logo">
+					<a href="#">
+						<img src="./images/site-logo.png" alt="모두의 HTML/CSS 로고" />
+					</a>
+				</h1>
+				<nav>
+					<ul class="gnb">
+						<li>
+              <a href="#">HOME</a>
+            </li>
+						<li>
+              <a href="#">HTML</a>
+            </li>
+						<li>
+              <a href="#">CSS</a>
+            </li>
+						<li>
+              <a href="#">JavaScript</a>
+            </li>
+					</ul>
+				</nav>
+				<!-- 검색 버튼 -->
+				<article class="search-form">
+					<h2 class="screen-out">사이트 내 검색</h2>
+					<form action="GET">
+						<input type="search" />
+						<button class="search-btn" type="submit">검색 실행</button>
+					</form>
+				</article>
+			</div>
+		</header>
+		<!-- main 시작 -->
+		<main>
+			<!-- section main-carousel 시작 -->
+			<section id="carousel" class="section carousel">
+        <h2 class="screen-out">모두의 HTML/CSS</h2>
+				<div class="inner m-carousel">
+          <figure>
+            <img class="lycat-img" src="./images/Lycat_3 1.png" alt="인사하는 라이캣" />
+            <figcaption>
+              <h3>모두의 HTML/CSS</h3>
+              <strong>HELLO WORLD! :)</strong>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing.<br />
+                Aut maxime porro nesciunt qui. Dolores, amet.
+              </p>
+              <ul>
+                <li>
+                  <a href="#">회원가입</a>
+                </li>
+                <li>
+                  <a href="#">로그인</a>
+                </li>
+              </ul>
+            </figcaption>
+          </figure>
+					<!-- 강의 광고 -->
+					<aside class="lecture-event">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./images/image 1.png" alt="MBIT 강의 보러가기" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/aside_link.png" alt="30분 요약강좌 보러가기" />
+                </a>
+              </li>
+            </ul>
+					</aside>
+				</div>
+			</section>
+			<!-- section schedule 시작 -->
+			<section id="schedule" class="section schedule">
+        <h2 class="screen-out">프로그래밍 스케줄</h2>
+				<div class="inner schedule">
+					<dl>
+						<div>
+							<dt>HTML</dt>
+							<dd>•Hypertext Markup Language 하이퍼텍스트 마크업 언어</dd>
+							<dd>•웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의할 때 사용
+							</dd>
+						</div>
+						<div>
+							<dt>CSS</dt>
+							<dd>•Cascading Style Sheets</dd>
+							<dd>
+								•HTML이나 XML(XML의 방언인 SVG, XHTML 포함)로 작성된 문서의 표시
+								방법을 기술하기 위한 스타일 시트 언어
+							</dd>
+						</div>
+						<div>
+							<dt>JavaScript</dt>
+							<dd>•일급 함수를 사용하는 가벼운 객체 지향 인터프리터 언어</dd>
+							<dd>
+								•웹페이지의 스크립트 언어로 잘 알려져 있지만, 브라우저가 아닌
+								환경에서도 많이 사용됨
+							</dd>
+						</div>
+					</dl>
+					<div class="wrap-schedule">
+            <div class="left-schedule">
+              <figure>
+                <!-- <img src="./images/뮤라 1.png" alt="땀흘리며 운동하는 뮤리" /> -->
+                <figcaption>
+                  <time datetime="5:00">오전 5:00</time>
+                  <h3>헛둘셋넷<br>열심히 운동하기</h3>
+                  <p>amet consectetur adipisicing elit.  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <!-- <img src="./images/소울곰_애벌래 1.png" alt="출근하다가 지렁이는 바라보는 소울곰" /> -->
+                <figcaption>
+                  <time datetime="9:00">오전 9:00</time>
+                  <h3>지친몸 이끌고<br>출근하기</h3>
+                  <p>amet consectetur adipisicing elit.  </p>
+                </figcaption>
+              </figure>
+            </div>
+            <figure class="right-schedule">
+              <!-- <img src="./images/gary.png" alt="치킨을 손에 들고 신나게 퇴근하는 개리" /> -->
+              <figcaption>
+                <time datetime="18:00">오후 6:00</time>
+                <h3>치킨과 함께하는<br>씐나는 퇴근</h3>
+                <p>amet consectetur adipisicing elit.  </p>
+              </figcaption>
+            </figure>
+				</div>
+			</section>
+			<!-- section board 시작 -->
+			<section id="board" class="section board">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+				<div class="inner board">
+          <ol class="board-tab-btn">
+            <li class="on">
+              <button type="button">Tab1</button>
+            </li>
+            <li>
+              <button type="button">Tab2</button>
+            </li>
+            <li>
+              <button type="button">Tab3</button>
+            </li>
+          </ol>
+          <section class="board-data">
+            <h3 class="screen-out">Tab1의 데이터 목록</h3>
+            <ol start="10" reversed>
+              <li>
+                <a href="#">
+                  <span>10</span>
+                  <p>Lorem ipsum dolor sit amet.orem ipsum dolor sit amet.orem ipsum dolor sit amet.orem ipsum dolor sit amet.orem ipsum dolor sit amet.</p>
+                  <time datetime="2022-01-01">2022.01.01</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>9</span>
+                  <p>Ullam aliquam ratione, a eos perspiciatis temporibus</p>
+                  <time datetime="2022-01-01">2022.01.01</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>8</span>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                  <time datetime="2022-01-01">2022.01.01</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>7</span>
+                  <p>Dolores quia excepturi alias quam quidem, necessitatibus a perferendis eum vitae aliquam volu...</p>
+                  <time datetime="2022-01-01">2022.01.01</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>6</span>
+                  <p>Adipisci provident laborum maxime dolore omnis iure consequuntur?</p>
+                  <time datetime="2022-01-01">2022.01.01</time>
+                </a>
+              </li>
+            </ol>
+          </section>
+          <!-- 게시판 더보기 버튼 -->
+          <a class="board-view-more-btn" href="#">more +</a>
+        </div>
+			</section>
+			<!-- section tab-carousel 시작 -->
+			<section id="tab-carousel" class="section tab-carousel">
+        <h2 class="screen-out">위니비언의 라이프 스타일</h2>
+				<div class="inner tab-carousel">
+          <article>
+            <h3>Amet consectetur<br>adipisicing.</h3>
+            <ul class="on">
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/라이캣_출근룩.png" alt="출근하는 라이캣" />
+                    <figcaption>
+                      <strong>Lorem, ipsum dolor.</strong>
+                      <p>Lorem, ipsum.</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/빙키.png" alt="핸드폰하며 누워있는 빙키" />
+                    <figcaption>
+                      <strong>Lorem, ipsum dolor.</strong>
+                      <p>Lorem, ipsum.</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/자바독_버스기다리는-중 1.png" alt="음악 들으며 버스기다리는 자바독" />
+                    <figcaption>
+                      <strong>Lorem, ipsum dolor.</strong>
+                      <p>Lorem, ipsum.</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/라이캣_출근룩.png" alt="출근하는 라이캣" />
+                    <figcaption>
+                      <strong>Lorem, ipsum dolor.</strong>
+                      <p>Lorem, ipsum.</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/빙키.png" alt="핸드폰하며 누워있는 빙키" />
+                    <figcaption>
+                      <strong>Lorem, ipsum dolor.</strong>
+                      <p>Lorem, ipsum.</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/자바독_버스기다리는-중 1.png" alt="음악 들으며 버스기다리는 자바독" />
+                    <figcaption>
+                      <strong>Lorem, ipsum dolor.</strong>
+                      <p>Lorem, ipsum.</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/라이캣_출근룩.png" alt="출근하는 라이캣" />
+                    <figcaption>
+                      <strong>Lorem, ipsum dolor.</strong>
+                      <p>Lorem, ipsum.</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/빙키.png" alt="핸드폰하며 누워있는 빙키" />
+                    <figcaption>
+                      <strong>Lorem, ipsum dolor.</strong>
+                      <p>Lorem, ipsum.</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/자바독_버스기다리는-중 1.png" alt="음악 들으며 버스기다리는 자바독" />
+                    <figcaption>
+                      <strong>Lorem, ipsum dolor.</strong>
+                      <p>Lorem, ipsum.</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+            <div class="tab-carousel-btn">
+              <button class="crs-btn prev" type="button">prev-btn</button>
+              <button class="crs-btn next" type="button">next-btn</button>
+            </div>
+            <ol class="crs-paging-btn">
+              <li class="on">
+                <a href="#">1번째 탭메뉴</a>
+              </li>
+              <li>
+                <a href="#">2번째 탭메뉴</a>
+              </li>
+              <li>
+                <a href="#">3번째 탭메뉴</a>
+              </li>
+            </ol>
+          </article>
+        </div>
+			</section>
+		</main>
+		<!-- footer 시작 -->
+		<footer id="footer">
+      <div class="inner footer">
+				<h2 class="screen-out">모두의 HTML/CSS 주소 정보</h2>
+        <div class="footer-left">
+          <img class="footer-logo" src="./images/footer-logo.png" alt="모두의 HTML/CSS 하단 로고">
+          <address>
+            <p>서울특별시 사랑시 고백구 행복독 123-45 1층</p>
+            <p>02-987-6543 / abc@gmail.com</p>
+          </address>
+        </div>
+				<small>&copyWeniv all rights reserved</small>
+      </div>
+    </footer>
+		<!-- 팝업 시작 -->
+		<article class="popUp">
+      <!-- 회원가입 페이지 -->
+    </article>
+	</body>
+</html>
+ 

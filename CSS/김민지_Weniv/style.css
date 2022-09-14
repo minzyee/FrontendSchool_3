@@ -1,0 +1,498 @@
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h2 {
+	text-align: center;
+}
+
+.screen-out {
+	display: none;
+}
+
+.clear-fix::before,
+.clear-fix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.inner {
+	width: 1224px;
+	margin: 0 auto;
+}
+
+/* Components */
+/* Header */
+#header {
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	background-color: #fff;
+}
+
+.inner.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.gnb {
+	width: 431px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.gnb li {
+	height: 101px;
+	line-height: 101px;
+}
+
+.gnb li::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 4px;
+	background-color: transparent;
+	position: relative;
+	bottom: 4px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0 6px;
+	transition: all 0.4s;
+}
+
+.gnb li:hover:after {
+	width: 100%;
+
+	background-color: #3a2a21;
+}
+
+.gnb li a {
+	display: block;
+	color: #000;
+}
+
+.search-form input {
+	border: none;
+	height: 46px;
+	border-bottom: 1px solid #eee;
+	position: relative;
+	top: 4px;
+	padding-left: 8px;
+}
+
+.search-btn {
+	width: 48px;
+	height: 48px;
+	font-size: 0;
+	border-radius: 4px;
+	border: 1px solid #eeeeee;
+	background-color: transparent;
+	cursor: pointer;
+	background-image: url(./images/searchIcon.png);
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* section carousel */
+.section.carousel {
+	width: 100%;
+	padding-top: 101px;
+	background-color: #ffcf5c;
+}
+
+.inner.m-carousel {
+	position: relative;
+	height: 699px;
+}
+
+.m-carousel figure {
+	display: flex;
+	position: absolute;
+	left: -80px;
+	bottom: 0;
+}
+
+.m-carousel figcaption {
+	width: 489px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -60%;
+}
+
+.m-carousel figcaption h3 {
+	font-size: 24px;
+	margin-bottom: 18px;
+}
+
+.m-carousel figcaption p {
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 49px;
+}
+
+.m-carousel figcaption strong {
+	font-size: 100px;
+	line-height: 95px;
+	margin-bottom: 18px;
+}
+
+.m-carousel figcaption ul li {
+	float: left;
+	margin-right: 9px;
+	text-align: center;
+	background-color: transparent;
+}
+
+.m-carousel figcaption ul li a {
+	display: block;
+	width: 180px;
+	height: 64px;
+	line-height: 64px;
+	color: #3a2a21;
+	border: 1px solid #3a2a21;
+	border-radius: 10px;
+	transition: all 0.4s;
+}
+
+.m-carousel figcaption ul li:hover a {
+	background-color: #3a2a21;
+	color: #fff;
+	border-radius: 10px;
+}
+
+/* 강의 광고 */
+.lecture-event {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+}
+
+.lecture-event ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.lecture-event ul li {
+	margin-bottom: 12px;
+}
+
+/* section schedule */
+.section.schedule {
+	margin-bottom: 216px;
+}
+
+.inner.schedule dl {
+	display: flex;
+	justify-content: space-between;
+	padding: 94px 0 110px;
+}
+
+.inner.schedule dt {
+	margin-bottom: 8px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.inner.schedule dd {
+	font-size: 16px;
+	list-style: circle;
+	width: 340px;
+	line-height: 20px;
+	color: #767676;
+}
+
+.wrap-schedule {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrap-schedule figure {
+	position: relative;
+	width: 600px;
+	border-radius: 10px;
+}
+
+.left-schedule figure {
+	height: 288px;
+}
+
+.left-schedule figure:nth-child(1) {
+	background-color: #e37066;
+	margin-bottom: 24px;
+}
+
+.left-schedule figure:nth-child(2) {
+	background-color: #cbdff7;
+}
+
+.right-schedule {
+	background-color: #d2e579;
+	height: 600px;
+}
+
+.wrap-schedule figcaption {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 0 0 32px;
+	width: 300px;
+}
+
+.wrap-schedule time {
+	margin-bottom: 32px;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.wrap-schedule h3 {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.wrap-schedule figure {
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.8) inset;
+}
+
+.left-schedule figure:nth-child(1) {
+	background-image: url(./images/뮤라\ 1.png);
+	color: #fff;
+}
+
+.left-schedule figure:nth-child(2) {
+	background-image: url(./images/소울곰_애벌래\ 1.png);
+}
+
+.right-schedule {
+	background-image: url(./images/gary.png);
+}
+
+/* section board */
+.section.board {
+	margin-bottom: 216px;
+}
+
+.section.board h2 {
+	margin-bottom: 89px;
+}
+
+.inner.board {
+	position: relative;
+}
+
+.board-tab-btn {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.board-tab-btn li button {
+	padding: 10px 83px;
+	margin-right: 4px;
+	background-color: #f5f5f5;
+	border: none;
+	cursor: pointer;
+}
+
+.board-tab-btn li.on button {
+	background-color: #ffcf5c;
+}
+
+.board-data ol li a {
+	display: flex;
+	padding: 30px 0;
+	border-top: 1px solid #d9d9d9;
+	color: #3a2a21;
+}
+
+.board-data ol li a span {
+	margin: 0 74px 0 20px;
+	width: 32px;
+	text-align: center;
+}
+
+.board-data ol li a p {
+	width: 850px;
+	margin-right: 110px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.board-data ol li a p time {
+	margin-right: 20px;
+	margin-left: 110px;
+}
+
+.board-data ol li a:hover p {
+	text-decoration: underline;
+}
+
+/* 게시판 더 보기 버튼 */
+.board-view-more-btn {
+	position: absolute;
+	top: 18px;
+	right: 65px;
+	color: #000;
+}
+
+/* section tab-carousel */
+.section.tab-carousel {
+	background-image: url(./images/sectionBrownBg.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 370px;
+	background-size: cover;
+}
+
+.inner.tab-carousel {
+	position: relative;
+	height: 740px;
+}
+
+.tab-carousel article h3 {
+	color: #fff;
+	font-size: 40px;
+	padding-top: 66px;
+	margin-bottom: 78px;
+}
+
+.tab-carousel article ul {
+	display: none;
+}
+
+.tab-carousel article ul.on {
+	position: absolute;
+	top: 185px;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 912px;
+}
+
+.tab-carousel article ul li:hover {
+	top: 2000px;
+}
+
+.tab-carousel article ul li a {
+	color: #000;
+}
+
+.tab-carousel article img {
+	margin-bottom: 11px;
+}
+
+.tab-carousel article ul figcaption {
+	font-size: 20px;
+}
+
+/* tab-carousel-btn */
+.tab-carousel-btn {
+	width: 101px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.crs-btn {
+	width: 48px;
+	height: 48px;
+	border-radius: 4px;
+	font-size: 0;
+	border: 1px solid #fff;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+	transition: all 0.4s;
+	cursor: pointer;
+}
+
+.crs-btn.prev {
+	background-position: 15px center;
+	background-image: url(./images/leftArrow.png);
+}
+
+.crs-btn.next {
+	background-position: 18px center;
+	background-image: url(./images/rightArrow.png);
+}
+
+.crs-btn:hover {
+	border: 1px solid #ffcf5c;
+	background-color: #ffcf5c;
+}
+
+.crs-paging-btn {
+	width: 70px;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 130px;
+	left: 50%;
+}
+
+.crs-paging-btn li a {
+	display: block;
+	border-radius: 10px;
+	background-color: #3a2a213a;
+	width: 10px;
+	height: 10px;
+	font-size: 0;
+	transition: all 0.4s;
+}
+
+.crs-paging-btn li.on a {
+	display: block;
+	background-color: #ffcf5c;
+	width: 32px;
+	height: 10px;
+}
+
+.crs-paging-btn li:hover a {
+	background-color: #ffcf5c;
+}
+
+/* Footer */
+#footer {
+	background-color: #f9f9f9;
+	color: #767676;
+	margin-top: 370px;
+}
+
+.inner.footer {
+	padding: 66px 0 78px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.footer-left {
+	width: 564px;
+	display: flex;
+	justify-content: space-between;
+}
+
+address {
+	font-style: normal;
+}
