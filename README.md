@@ -4,9 +4,9 @@
 
 
 
-- [Fox_Forest_Zoo](./Fox_Forest_Zoo)
-- [profile_minji](./profile_minji)
+- [Fox Forest Zoo](./Fox_Forest_Zoo)
+- [Profile](./profile_minji)
 - [Weniv](./Weniv)
-- [bucketlist](./bucketlist)
+- [Bucket List](./bucketlist)
 - [zigzag](./zigzag)
-- [10000hours](./10000hours)
+- [1만시간의 법칙](./10000hours)
