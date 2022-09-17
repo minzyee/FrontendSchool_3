@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">		
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+		<!-- body 전체한테 색상을 주고, wrap 자체한테 레이아웃의 center를 줘도 되지 않을까? -->
+		<div class="wrap">
+			<!-- header 시작 -->
+			<header id="header">
+				<!-- 레이아웃의 센터 영역을 wrap안에 바로 주는 것이 좋을까? -->
+				<!-- 아니면 header / main or section / footer 마다 각각 주는 것이 좋을까? -->
+				<div class="center header">
+					<!-- h1에는 title이라는 클래스를 붙여주는 것이 나은가?
+							 아니면 h1을 감싸는 영역에 class가 있으니까, h1 요소명 그대로 둬도 되는가? -->
+					<h1 class="title">
+						<span>START YOUR</span>
+						<span>PORTFOLIO</span>
+						<span>PROJECT</span>
+					</h1>
+					<span class="title-line"></span>
+					<p class="title-context">
+						Lorem Ipsum is simply dummy text of the printing and
+						typesetting industry. Lorem Ipsum has been the industry's
+						standard dummy text ever since the 1500s, when an unknown
+						printer took a galley of type and scrambled
+					</p>
+				</div>
+			</header>
+
+			<!-- main 시작 -->
+			<!-- 어떤 사이트 안의 상세 페이지 인가? -->
+			<main id="main">
+				<!-- 이미지와 그에 관련한 텍스트가 있기 떄문에, figure 사용함 -->
+				<div class="center main">
+					<ul class="project">
+						<li>
+							<figure>
+								<!-- 이 부분은 배경이미지로 할까보다... -->
+								<img src="./images/photo01.png" alt="Rest">
+								<figcaption>
+									<h3>Take a rest</h3>
+									<!-- 작은 리스트 형식의 레이아웃 -->
+									<ul>
+										<li>It has survived not only five centuries.</li>
+										<li>Why do we use it?</li>
+										<li>Contrary to popular belief, Lorem Ipsum is not simply random text. It has root.</li>
+									</ul>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="./images/photo02.png" alt="Craft">
+								<figcaption>
+									<h3>Build something</h3>
+									<ul>
+										<li>There are many variations of passages of Lorem Ipsum available.</li>
+										<li>If you are going to use a passage of Lorem Ipsum.</li>
+										<li>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</li>
+									</ul>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="./images/photo03.png" alt="Scrap">
+								<figcaption>
+									<h3>Reference</h3>
+									<ul>
+										<li>Once is therefore always free form repetition, injected humor, or non-characterisic words etc.</li>
+										<li>Predefined chunks as necessary, making this the first true generator on the internet.</li>
+										<li>Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form.</li>
+									</ul>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+				</div>
+			</main>
+
+			<!-- footer 시작 -->
+			<footer id="footer"></footer>
+		</div>
+	</body>
+</html>
