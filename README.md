@@ -1,4 +1,4 @@
-# [FrontendSchool_3](./FrontendSchool_3)
+# [FrontendSchool_3](https://minzyee.github.io/FrontendSchool_3/index.html)
 
 📚 과제 업로드 페이지 입니다:)<br/><br/>
 
