@@ -9,4 +9,4 @@
 - [Weniv](./Weniv)
 - [bucketlist](./bucketlist)
 - [zigzag](./zigzag)
-- [1만시간의 법칙](https://minzyee.github.io/10000hours/#)
+- [1만시간의 법칙](./1만시간의 법칙)
