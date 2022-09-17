@@ -67,7 +67,7 @@ img {
 }
 
 .task-list > li {
-  margin: 10px 0;
+  margin: 14px 0;
 }
 
 .task-list > li:hover a {
@@ -105,16 +105,6 @@ img {
     font-size: 1.8em;
   }
 
-  .center {
-    width: 71%;
-  }
-
-  /* HEADER */
-  #header {
-    height: 80px;
-    line-height: 80px;
-  }
-
   /* MAIN */
   #main {
     margin-top: 60px;
@@ -125,7 +115,7 @@ img {
   }
 
   .task-list > li {
-    margin: 8px 0;
+    margin: 10px 0;
   }
 
 }
@@ -137,27 +127,17 @@ img {
     font-size: 1.4em;
   }
 
-  .center {
-    width: 53%;
-  }
-
-  /* HEADER */
-  #header {
-    height: 60px;
-    line-height: 60px;
-  }
-
   /* MAIN */
   #main {
     margin-top: 40px;
   }
 
   .task-list {
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
   .task-list > li a {
-    padding: 30px 30px;
+    padding: 26px 26px;
   }
 
 }
