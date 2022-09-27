@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커스텀 체크박스</title>
+  <style>
+    /* 네이버에서 요소를 안보이게 처리할 때, 사용하는 기법 */
+    .txt-hide {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+    }
+
+    .label-hold::before {
+      display: inline-block;
+      content: '';
+      width: 22px;
+      height: 22px;
+      vertical-align: -5px;
+      background-image: url(./images/css_sprites_retina.png);
+      background-position: -52px -10px; /* 2배 사이즈를 2로 나눈 값이다... */
+      background-size: 84px 42px;
+    }
+
+    /* 인풋 박스가 체크 돼었을 때 사용하는 가상요소, checked */
+    /* 인접 형제 선택자 + */
+    .inp-hold:checked + .label-hold::before {
+      background-image: url(./images/css_sprites_retina.png);
+      background-position: -10px -10px;
+      background-size: 84px 42px;
+    }
+
+    .inp-hold:focus + .label-hold::before {
+      /* 레이아웃에 영향을 미치지 않는다. 아웃라인 표시에는 보더보다 아웃라인이 좋다. */
+      /* 접근성에 충족을 시켜준다. */
+      outline: 2px solid red;
+      outline-offset: 5px;
+      border-radius: 50%;   
+      box-sizing: border-box;      
+
+      /* 보더는 박스모델이 있기 때문에, 스타일 적으로 밀려난다. */
+      /* border: 2px solid red; */
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="inpHold" class="inp-hold txt-hide">
+  <label for="inpHold" class="label-hold">선택해주세요.</label>
+</body>
+</html>

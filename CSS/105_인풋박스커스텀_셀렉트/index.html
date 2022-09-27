@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    button {
+      border: none;
+    }
+
+    .favorit-pro-lang {
+      width: 200px;
+      background-color: yellow;
+    }
+
+    .pro-lang-title {
+      width: 200px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      border: 1px solid #9B51E0;
+      cursor: pointer;
+      font-size: 12px;
+      background-image: url(./images/icon-Triangle-down.png);
+      background-repeat: no-repeat;
+      background-position: 175px center;
+      margin-bottom: 9px;
+    }
+
+    .favorit-pro-lang-list {
+      border-radius: 10px;
+
+    }
+
+    .favorit-pro-lang-list > li {
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="favorit-pro-lang">
+    <button type="button" class="pro-lang-title">최애 프로그래밍 언어</button>
+    <ul class="favorit-pro-lang-list">
+      <li><button type="button">Python</button></li>
+      <li><button type="button">Java</button></li>
+      <li><button type="button">JavaScript</button></li>
+      <li><button type="button">C#</button></li>
+      <li><button type="button">C/C++</button></li>
+    </ul>
+  </div>
+</body>
+</html>

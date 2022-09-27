@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex 실습2</title>
+  <style>
+    /* align-items는 stretch가 기본값이다. */
+    /* 부모의 높이를 갖게 된다. */
+    .container {
+      width: 300px;
+      height: 300px;
+      border: 5px solid #000;
+      display: flex;
+      flex-flow: wrap column;
+
+      /* flex-flow: wrap column; 은 아래 속성과 동일하다 */
+      /* flex-wrap: wrap; */
+      /* flex-direction: column; */
+    }
+
+    .box {
+      border: 5px solid black;
+      width: 50px;
+      height: 50px;
+      background-color: #f26835;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+</body>
+</html>

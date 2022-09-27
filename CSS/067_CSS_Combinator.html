@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 자손 Combinator</title>
+  <style>
+    /* 인접 형제 콤비네이터 */
+    /* 2번째 ul이 변하지 않은 이유는, 인접 형제 콤비네이터는 바로 위나 아래 있는 형제만 선택한다. */
+    h1 + ul {
+      color: red;
+    }
+
+    /* 일반 형제 콤비네이터 */
+    /* 1 2 4 번 ul만 바뀐다. */
+    /* h1의 다음에 오는 ul들을 선택한다는 의미이다. */
+    h1 ~ ul {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>hello world 1</li>
+    <li>hello world</li>
+    <li>hello world</li>
+  </ul>
+  <h1>hello world</h1>
+  <ul>
+    <li>hello world 2</li>
+    <li>hello world</li>
+    <li>hello world</li>
+  </ul>
+  <ul>
+    <li>hello world 3</li>
+    <li>hello world</li>
+    <li>hello world</li>
+  </ul>
+  <h2>hello world</h2>
+  <ul>
+    <li>hello world 4</li>
+    <li>hello world</li>
+    <li>hello world</li>
+  </ul>
+  <div>
+    <ul>
+      <li>hello world 5</li>
+      <li>hello world</li>
+      <li>hello world</li>
+    </ul>
+  </div>
+</body>
+</html>

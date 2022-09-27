@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line-height와 수직정렬</title>
+    <style>
+      button {
+        /* width: 200px;
+        height: 50px; */
+
+        padding: 30px;
+      }
+
+
+      .modal-table {
+        display:table;
+        position:relative;
+        width:100%;
+        height:200px;
+        border:2px solid #666;
+      }
+
+      .modal-cell{
+        display:table-cell;
+        vertical-align:middle;
+      }
+
+      .box{
+        display:block;
+        margin:0 auto;
+        padding:10px;
+        width:90px;
+        background-color:#dedede;
+        font-size:12px;
+      }
+
+      .pp {
+        overflow: hidden;
+        width: 600px;
+        
+        /* 자식요소들의 배치를 지정하는 속성입니다. flex의 예전 버전입니다. */
+        display:-webkit-box;
+        
+        -webkit-line-clamp: 2; /*  블록 컨텐츠의 라인 수를 제한하는 속성입니다.*/
+        
+        /* 자식요소들의 배치를 수직으로 만드는 속성입니다. flex-direction의 예전 버전입니다. */
+        -webkit-box-orient: vertical;
+      }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <span class="one">Lorem, ipsum</span>
+    <span class="two">dolor sit</span>
+    <span class="three">amet consectetur.</span>
+  </div>
+
+
+  <div class="modal-table">
+    <div class="modal-cell">
+      <div class="box">세로로 가운데 정렬</div>
+    </div>
+  </div>
+
+  <a href="#">hello world</a>
+
+
+
+  <p class="pp">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex 실습2</title>
+  <style>
+    /* align-items는 stretch가 기본값이다. */
+    /* 부모의 높이를 갖게 된다. */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .box {
+      /*
+        width 와 height가 좀더 강제적인 느낌.
+        flex-basis는 유연한 느낌
+
+        flex-basis 속성은 유연한(flexible)크기를 가진다.
+        즉, 고정적인 width와 height 값을 지정해 줄 떄와 달리 축의 방향에 따라
+        또 내부 콘텐츠에 따라 크기가 가변적, 유동적으로 변할 수 있다.
+
+        flex-basis 속성은
+        flex-direction의 방향에 따라서 달라진다.
+      */
+      border: 10px solid rgba(0, 0, 0, 0.351);
+      flex-basis: 40px;
+      background-color: blue;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Reiciendis quo enim dolore nam velit in debitis. Tempore vel
+        maxime inventore. Ipsum non in blanditiis dolore saepe dolorem,
+        nisi similique aut? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Reiciendis quo enim dolore nam velit in
+        debitis. Tempore vel maxime inventore. Ipsum non in blanditiis
+        dolore saepe dolorem, nisi similique aut?
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <div class="box">lorem</div>
+</div>
+</body>
+</html>

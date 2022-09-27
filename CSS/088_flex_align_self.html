@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-self</title>
+  <style>
+    .container {
+      display: flex;
+      /* 1. 부모에게 주는 속성으로, 중앙정렬 많이 사용하죵 */
+
+      /* 주축 방향으로 정렬 */
+      /* justify-content: center; */
+
+
+      /* 교차축 방향으로 정렬 */
+      /* align-items의 기본값은 stretch이다. */
+      /* align-items: center; */
+
+
+      /* flex는 적용된 컨텐츠의 높이 중에 정렬해주기 때문에 높이 값을 지정해줘야 한다.*/
+      height: 400px;
+
+
+      /* 부모에게 주어 전체를 이동 */
+      /* align-items: center; */
+      /* align-items: flex-start; */
+      /* align-items: flex-end; */
+    }
+
+    .item {
+      border: 1px solid #000;
+    }
+
+    .item:nth-child(2) {
+      align-self: center;
+      align-self: flex-start;
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+</body>
+</html>

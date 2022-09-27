@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 비디오</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    video {
+      width: 900px;
+      max-width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: auto;
+    }
+
+    div {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    span {
+      display: block;
+      padding-bottom: 40%;
+      background-color: pink;
+    }
+
+    .cont-video {
+      position: relative;
+      /* padding-top: 56.25%; */
+      height: 56.25vw;
+      /* 많은 개발자들이 잘 모르는 CSS 매직을 알려드리겠습니다 :) */
+      /* padding-top, padding-bottom 속성의 % 값은 부모 요소의 넓이에 비례합니다. */
+      /* 예를 들어 부모의 넚이가 1200px 이라면 padding-top=50% 의 값은 600px 과 같습니다. */
+    } 
+
+    .video-next-level {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <video autoplay controls loop src="next_level.mp4"></video> -->
+
+  <!-- <div>
+    <span></span>
+  </div> -->
+
+  <article class="cont-video">
+    <iframe src="" frameborder="0"></iframe>
+  </article>
+</body>
+</html>

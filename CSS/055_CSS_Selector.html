@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 선택자 심화</title>
+  <style>
+    /* ㅁa 태그 중에 div 중에 font=-size를 10px로 갖공 ㅣㅆ는애 */
+    div[class] {
+      font-size: 10px;
+    }
+
+    a[href] {
+      font-size: 10px;
+    }
+
+    a[href="https://www.paullab.co.kr"]
+    {
+      font-size: 32px;
+    }
+
+    div[class~="weniv"] {
+      color: red;
+    }
+    </style>
+</head>
+<body>
+  <div>hello world</div>
+  <div class="one">hello world</div>
+  <div class="">hello world</div>
+  <a>위니브</a>
+  <a href="https://www.paullabs.co.kr">위니브</a>
+  <a href="https://www.paullab.co.kr">위니브</a>
+  <!-- 공백을 기준으로 스플릿을 했을 때, 완전한 단어를 포함해야한다. -->
+  <div class="weniv">hello</div>
+  <div class="wenivs">hello</div>
+  <div class="weniv we">hello</div>
+  <div class="we weniv we">hello</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+      .container {
+        display: grid;
+        /* fr: fraction 분수, 비율, 일부, 부분 이라는 의미 */
+        /* 1. columns 수정 */
+        /* grid-template-columns:  1fr 1fr 1fr;
+        grid-template-columns:  1fr 1fr 1fr 1fr;
+        grid-template-columns:  5% 10% 15% 70%;
+        grid-template-columns:  100px 200px;
+        grid-template-columns:  1fr 2fr 1fr;
+        grid-template-columns:  repeat(3, 1fr); */
+
+        /* 2. rows 수정 */
+        /* grid-template-rows:  100px; */
+        /* grid-template-rows:  repeat(3, 100px 200px); */
+        /* grid-template-rows:  100px 200px 100px 200px;  위에 축약형 */
+        /* grid-template-columns:  1fr 1fr 1fr; */
+
+
+        /* 3. minnax() */
+        /* 열방향 그리드 트랙의 최소 넓이를 50px, 최대 넓이를 150px로 한다.  */
+        /* 컬럼의 최소 너비값이 50px이 된다. */
+        /* grid-template-columns: repeat(3, minmax(50px, 150px)); */
+
+        /* 행방향 그리드 트랙의 최소 높이를 120px, 최대 높이를 가용할 수 있는 최대 크기로 한다.  */
+        /* 컬럼의 최소 너비값이 50px이 된다. */
+        /* grid-template-rows: repeat(3, minmax(120px, auto)); */
+
+
+        /* 4. auto-fill & auto-fit */
+        /* auto-fill은 min에 기준을 맞추고, auto-fit은 max에 기준을 맞춘다. */
+
+        /* auto-fill : 정해둔 너비나 높이를 벗어나면, 밑으로 보낸다. */
+        /* grid-template-columns: repeat(auto-fill, minmax(50px, auto)); */
+
+        /* auto-fit : 더 채울 수 있을 때, 너비에 맞춰 최대한 늘어난다. */
+        grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+      }
+
+      .item {
+        border: 1px solid #000;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+</body>
+</html>

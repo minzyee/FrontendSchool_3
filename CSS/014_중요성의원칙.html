@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>중요성의 원칙</title>
+		<style>
+			/* !important가 둘 다 적용되어 있을 때에는 순서에 영향을 받는다. */
+			.one {
+				color: red !important;
+			}
+
+			.two {
+				color: blue !important;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- html에 웬만하면 스타일을 주지말라는것이 기능적 분리뿐 아니라 CSS 구조에도 영향을 주는군요 -->
+		<!-- style 시트에 가장 최근에 적힌 스타일이 적용된다. -->
+		<!-- 태그 내 class에 기입되는 순서는 적용과는 무관하다. -->
+		<div class="one two">hello world</div>
+		<div class="two one">hello world</div>
+
+		<!-- !important는 inline CSS보다 우선이다. -->
+		<div class="two" style="color: green">hello world</div>
+	</body>
+</html>

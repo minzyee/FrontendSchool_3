@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition</title>
+  <style>
+
+    /* :  가상 클래스 선택자 */
+    /* :: 가상 요소 선택자 */
+
+    .one {
+      font-size: 16px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transition: all 1s;
+      /* transition-delay: 1s; */
+      /* transition-duration: 1s; */
+      /* transition-property: background-color, width, font-size; */
+      /* transition-timing-function: linear; */
+      /* transition-timing-function: steps(3, start); */
+      transition-timing-function: steps(3, end);
+    }
+
+    .one:hover {
+      font-size: 30px;
+      width: 300px;
+      height: 300px;
+      background-color: blue;
+    }
+
+    .two {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      transition: all 1s;
+      transition-delay: 1s;
+    }
+
+    .two:hover {
+      width: 300px;
+      height: 300px;
+      background-color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="one">hello world</div>
+  <div class="two">hello world</div>
+</body>
+</html>
