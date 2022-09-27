@@ -1,6 +1,6 @@
 # [FrontendSchool_3](https://minzyee.github.io/FrontendSchool_3/index.html)
 
-📚 과제 업로드 페이지 입니다:)<br/><br/>
+📚 배우고 실습한 것을 올립니다 :)<br/><br/>
 
 
 
