@@ -1,0 +1,61 @@
+// Sass 공식문서
+.one {
+  font-size: 10px + 10px;
+}
+
+.two {
+  font-size: 10px - 10px;
+}
+
+// 괄호 있어야 합니다. 그러지 않으면 문자열로 반환함(그리고 하나는 정수만 적어줘야 합니다)
+// error
+// .three-1 {
+//   font-size: 10px / 10px; // ()괄호를 같이 적어주세요. 안그러면 10px/10(문자열)로 나옵니다.
+// }
+
+.three-2 {
+  font-size: (10px / 10); // 둘 중 하나의 피연산자는 정수만 적어라.
+}
+
+// error
+// .four {
+//   font-size: 10px * 10px;
+// }
+
+// error
+// .four {
+//   font-size: 10px * 1in;
+// }
+
+// error
+// .four {
+//   font-size: (10px * 10px);
+// }
+
+// .four {
+//   font-size: 10px * 10;
+// }
+
+// .four {
+//   font-size: 10px * 10.1;
+// }
+
+// error
+// .five {
+//   font-size: 10px ** 10px;
+// }
+
+// 곱하기와 나누기와는 다르게, 2개의 단위가 모두 있어도 에러가 나지 않습니다.
+// 앞의 값으로 반환합니다.
+.six-1 {
+  font-size: 10px % 3px;
+}
+
+// 곱하기와 나누기와는 다르게, 2개의 단위가 모두 있어도 에러가 나지 않습니다.
+.six-2 {
+  font-size: 10px % 3;
+}
+
+.six-3 {
+  font-size: 3in % 10px;
+}

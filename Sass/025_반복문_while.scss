@@ -1,0 +1,9 @@
+$minji: 10;
+@while ($minji > 1) {
+  $minji: $minji - 2;
+  .content-#{$minji} {
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+}

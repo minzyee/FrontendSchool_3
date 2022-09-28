@@ -1,0 +1,9 @@
+// #{#변수명}
+// 1부터 3를 minji에 넣어주겠다.
+
+@for $minji from 1 through 3 {
+  .profile-#{$minji} {
+    background-color: red;
+    font-size: #{$minji * 10}px;
+  }
+}
