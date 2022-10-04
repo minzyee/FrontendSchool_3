@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>    
+    console.log("hello");
+
+
+    // console.dir은 요소를 JSON과 같은 트리 구조로 출력 하고,
+    // DOM JS 객체의 전체 표현을 보려고 할 때 유용.
+    // 객체는 dir, 나머지는 log로 로깅하면 편하다.
+    // .dir();
+    let data = {
+      'one': 1,
+      'two': 2,
+      'three': 3,
+    }
+    console.dir(data);
+
+    let data2 = [10, 20, 30];
+    console.dir(data2);
+
+
+    // .info();
+    console.info("hello world");
+
+
+    // .group() 과 .grounEnd();
+    console.group("one");
+    console.log("호준/팀원");
+    console.log("유정/팀원");
+    console.log("혜연/팀원");
+
+    console.group("two");
+    console.log("태수/팀원");
+    console.log("슬기/팀원");
+    console.groupEnd();
+    console.log("end");
+    console.groupEnd();
+    console.log("end");
+
+
+    // .table();
+    console.table(data);
+
+
+    // .error();
+    console.error("error!");
+    console.error("정신차렷!");
+    
+    
+    // .warn();
+    console.warn("error");
+    console.warn("실행은 해줄게, 다만 경고문구는 읽어봐");
+
+
+
+    // 잊으셔도 괜찮습니다. %c 기준으로 style 요소가 하나씩 적용된다.
+    console.log("%chello world", "color:red;font-size:32px");
+  </script>
+</body>
+</html>

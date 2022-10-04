@@ -17,6 +17,10 @@
   font-size: (10px / 10); // 둘 중 하나의 피연산자는 정수만 적어라.
 }
 
+.three-3 {
+  font-size: (10px * 10); // 둘 중 하나의 피연산자는 정수만 적어라.
+}
+
 // error
 // .four {
 //   font-size: 10px * 10px;

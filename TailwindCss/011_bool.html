@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const(참조 변경 불가,), let(변경 가능), var(X)
+    // 평상시에는 const를 사용하고, 나중에 값의 변경이 일어나야 할 곳에만 let을 사용하기를 권장
+    let one = true;
+    let two = false;a
+    let three;
+    let four = null;
+    let five = Infinity; // 비교할 때 많이 사용. 어떤 숫자보다 큰 숫자나 작은 수를 구한 때!
+
+    console.log(Boolean(''));     // false
+    console.log(Boolean(' '));    // true
+    console.log(Boolean('abc'));  // true
+    console.log(Boolean(0));      // false
+    console.log(Boolean(100));    // true
+    console.log(Boolean(three));  // false
+    console.log(Boolean(four));   // false
+    console.log(Boolean(five));   // true
+    one = 0;
+
+    // 우리를 힘들게 하는 JS
+    console.log(Boolean([])); // 이게 true이다...
+    console.log(Boolean({})); // 이게 true이다...
+
+    if(one){
+      console.log('hello');
+    } else {
+      console.log('world');
+    }
+  </script>
+</body>
+</html>

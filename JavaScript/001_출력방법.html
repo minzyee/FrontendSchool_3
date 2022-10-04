@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="one"></div>
+  <script>
+    // about: blank에서 개발자 도구를 열고, console에서 'document.'을 입렵하면,
+    // 여러가지 document 메서드를 볼 수 있습니다.
+
+    // document: 문서 전체
+    // document.getElementById("one").innerHTML = "Hello <strong>world</strong>";
+
+
+    // 이런 형태로도 작성가능한데, '메서드 체이닝'이라고 한다.
+    // document
+    // .getElementById("one")
+    // .innerHTML = 
+    // "Hello <strong>world</strong>";
+
+
+    document.getElementById("one").innerHTML = "Hello <strong>world 1</strong>";
+    console.log("hello world 2");
+    // window.alert("hello world 3");
+    document.write("hello world 4");
+
+
+    // 콘솔의 위치는?
+    // 브라우저 -> 부라우저 개발자 도구
+    // node  -> shell창, 터미널
+
+    // document -> html 문서
+    // window   -> 브라우저
+
+
+    // .innerHTML은 document.getElementById("one")라는 요소의 메서드? -> DOM수업에서 다룹니다.
+  </script>
+</body>
+</html>

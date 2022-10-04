@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>질의응답</title>
+</head>
+<body>
+  <script>
+    // pop쓰면 원본 배열이 수정되는데 원본 배열 변경 없이 값을 꺼내려면 인덱스를 사용하는 방법 밖에는 없나요?
+
+    // 원본 수정 없이 값을 수정하고 싶을 때는 어떻게 할까?
+    let x = [10, 20, 30, 40];
+    console.log(...x); // 원본 수정 없이 값을 수정할 때
+    
+    // 새로 만들어진 배열에서 pop이 되었다.
+    console.log([...x].pop()); // 이렇게 스프레드 기법을 사용해서 꺼내주면 된다.
+
+    console.log(x);
+
+    let y = [...x];
+    y.pop();
+    console.log(y);
+  </script>
+</body>
+</html>
