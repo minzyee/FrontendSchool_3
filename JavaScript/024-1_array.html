@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>array</title>
+</head>
+<body>
+  <script>
+    // reverse(): 순서를 거꾸로 뒤집고 싶다면 
+    const cafe = ['coffee', 'cake', 'tea', 'cookie'];
+    cafe.reverse();
+
+
+    // indexOf(): 요소의 인덱스를 찾고 싶을 때 사용
+    // 찾으려는 요소가 없으면 -1을 반환 한다.
+    // 중복하는 문자열의 경우, 앞 순서의 문자열을 선택한다.
+    const cafe2 = ['tea', 'coffee', 'tea', 'cake', 'tea', 'cookie'];
+    console.log(cafe2.indexOf()); // -1
+    console.log(cafe2.indexOf('tea')); // 0
+    console.log(cafe2.indexOf('cake')); // 3
+
+
+    const arr = [{
+      'name' : 'title1',
+      'contents' : 'contents1',
+      'dataNum' : 1,
+      'data' : [1, 2, 3]
+    }, {
+      'name' : 'title2',
+      'contents' : 'contents2',
+      'dataNum' : 2,
+      'data' : [1, 2, 3]
+    }, {
+      'name' : 'title3',
+      'contents' : 'contents3',
+      'dataNum' : 3,
+      'data' : [1, 2, 100]
+    }, {
+      'name' : 'title4',
+      'contents' : 'contents4',
+      'dataNum' : 4,
+      'data' : [1, 2, 3]
+    }, {
+      'name' : 'title5',
+      'contents' : 'contents5',
+      'dataNum' : 5,
+      'data' : [1, 2, 100]
+    }];
+
+
+    const newArr = arr.map(function(i){
+      return i.name;
+    });
+
+    console.log(newArr);
+  </script>
+</body>
+</html>
