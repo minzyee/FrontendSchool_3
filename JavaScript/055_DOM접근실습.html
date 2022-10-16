@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tlftmq</title>
+  <style>
+    .box {
+      width: 400px;
+      height: 400px;
+      background-color: #000;
+      margin: 0 auto;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px auto;
+      width: 400px;
+    }
+
+    .box.red {
+      background-color: red;
+    }
+
+    .box.yellow {
+      background-color: yellow;
+    }
+
+    .box.green {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <ul>
+    <li>
+      <button class="btn red">빨강</button>
+    </li>
+    <li>
+      <button class="btn yellow">노랑</button>
+    </li>
+    <li>
+      <button class="btn green">초록</button>
+    </li>
+  </ul>
+  
+
+  <script>
+    const box = document.querySelector(".box");
+    const btnRed = document.querySelector(".btn.red");
+    const btnYellow = document.querySelector(".btn.yellow");
+    const btnGreen = document.querySelector(".btn.green");
+
+    btnRed.addEventListener('click', function(){
+      box.classList.toggle("red");
+    });
+
+    btnYellow.addEventListener('click', function(){
+      box.classList.toggle("yellow");
+    });
+
+    btnGreen.addEventListener('click', function(){
+      box.classList.toggle("green");
+    });
+  </script>
+</body>
+</html>
