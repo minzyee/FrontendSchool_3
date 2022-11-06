@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 객체의 프로퍼티에 접근하듯이 값을 변경할 수 있게 된다.
+
+    // get 값을 가져온다.
+    // 단점: 비공개프로퍼티에 쉽게 접근 가능해진다. 그래서 비공개 프로퍼티 만들고싶을 땐, 지양하기
+    get password() {
+      return this.#password;
+    }
+    
+    // set 값을 수정하다.
+    set password(pw) {
+      this.#password = pw;
+    }
+
+
+  </script>
+</body>
+</html>

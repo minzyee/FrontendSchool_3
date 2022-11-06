@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 객체와 객체가 서로 메소드를 통해 상호작용하게 하는것이 바로
+    // 객체지향 프로그래밍이라고 할 수 있습니다.
+    const me = {
+      name : '웨이드',
+      address : '제주도 제주시 인다 1길',
+      phoneNum : '010-8001-6536',
+      canWalk : function(){
+        console.log('웨이드가 걷는다.');
+      },
+      teaching : function(student){
+        student.levelUp();
+      }
+    }
+
+    const student = {
+      level: 1,
+      levelUp : function(){
+        this.level++;
+      }
+    }
+
+
+    // 민지 추상화해보기
+    const minzyee = {
+      name: '김민지',
+      age: 26,
+      address: '경기도 파주시',
+      favoritFood: ['피자', '초밥', '라면'],
+      canEat: function() {
+        console.log(`민지가 ${favoritFood}를(을) 먹는다.`)
+      },
+      eating: function(bulkUp) {
+        bulkUp.weight();
+      }
+    }
+
+    const bulkUp = {
+      kg: 1,
+      weight: function() {
+        this.kg++;
+      }
+    }
+
+    // 내 코드
+    let food = ['피자', '연어', '티라미수', '짜장면', ];
+    let randomFood = food[Math.floor(Math.randome() * food.length)];
+
+
+    function FoodFactory(food) {
+      this.food = food;
+      this.sayFoodName = function() {
+        console.log(`삐리비리. 손님 ${this.randomFood}나왔습니다.`);
+      }
+    }
+
+
+    // 대엽님 코드
+    function NewFactory(food) {
+      this.food = food; 
+      const chosenFood = food[Math.floor(Math.random() * food.length)]
+      this.choice = function () {
+        return (`이번에는 ${chosenFood}을 드시면 됩니다.`);
+      };
+    }
+
+    let whatToEat = new NewFactory(["짜장면", "짬뽕", "탕수육", "깐풍기", "유린기", "볶음밥"]);
+    console.log(whatToEat.choice());
+
+  </script>
+</body>
+</html>

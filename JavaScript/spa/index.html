@@ -1,0 +1,56 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>위니브 스토어</title>
+        <link
+            href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link rel="stylesheet" href="src/style/style.css" />
+    </head>
+
+    <body>
+        <div id="root">
+            <h1 class="ir">상품목록</h1>
+            <ul class="product-list">
+
+            </ul>
+        </div>
+        <script>
+            const root = document.getElementById("root");
+
+            // 통일성을 해친겁니다.
+            // async await을 사용했으면, 아래 코드도 async await을 써야합니다.
+            async function getProductData() {
+                // fetch는 프로미스를 반환함. fetch 부분도 프로미스다.
+                const response = await fetch(
+                    "http://test.api.weniv.co.kr/mall"
+                );
+                const product = response.json();
+                return product;
+            }
+            getProductData() // getProductData는 프로미스다.
+            .then((product) => {
+                // console.log(product);
+                const mainElement = document.createElement('main');
+                mainElement.classList.add('product');
+                console.log(mainElement)
+
+                // createElement로하면 JS코드가 너무 길어져서 통일성을 무시하고 innerHTML로 합니다.
+                // 통일성을 해친겁니다.
+                // 처음부터 innerHTML로 했으면 끝까지 innerHTML로 하고,
+                // 처음부터 DOM 컨트롤로 했으면 끝까지 DOM으로 해야합니다.
+                mainElement.innerHTML = `
+                    <h1 class="ir">상품목록</h1>
+                    <ul class="product-list">
+                `;
+                // console.log(mainElement);
+            })
+            .then()
+            .catch();
+        </script>
+    </body>
+</html>
