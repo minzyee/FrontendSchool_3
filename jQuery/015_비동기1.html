@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <button id="btn_data">클릭해주세요!</button>
+  <div id="data"></div>
+  <script>
+      $("#btn_data").click(function () {
+          //$.ajax({경로, 동기화 여부, 성공하면 할 일})
+          //$.ajax({url:'경로', async: true, success:function(result){}})
+          $.ajax({
+              url: "http://test.api.weniv.co.kr/mall",
+              async: true,
+              success: function (result) {
+                  $("#data").text(result);
+              },
+          });
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리의 돔탐색 children / siblings / parents</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="title">TITLE</h1>
+    <ul>
+      <li class="items">item 1</li>
+      <li class="items">item 2</li>
+      <li class="items">item 3</li>
+    </ul>
+
+    <ul class="ul2">
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+    </ul>
+  </div>
+
+  <script>
+    // console.log($(".items").children());
+    // $(".items").children().css("color", "red");
+    $(".items").parent().css("backgroundColor", "blue");
+
+    $(".items").eq(1).css("color", "red");
+    
+    $(".ul2").children("li:lt(3)").css("color", "red");
+    
+    $(".ul2").children("li:lt(3)").css("color", "green");
+    // $('.ul2 li:lt(3)').css('color', 'green');
+    
+    $(".ul2").children("li:gt(5)").css("color", "red");
+    // $('.ul2 :nth-child(n+3)').css('color','green');
+
+    // $('.ul2 > li').slice(6,).css('color', 'red').css('backgroundColor', 'blue');
+
+    // $('.ul2 > li').slice(6,).css({ color: "blue", background: "red" })
+  </script>
+</body>
+</html>
