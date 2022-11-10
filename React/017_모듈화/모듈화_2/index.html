@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">test</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"
+    integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script data-plugins="transform-es2015-modules-umd" type="text/babel" src="./Main.js"></script>
+
+  <!-- JSX 문법을 사용하기 위해서는 type="text/babel"을 지정해줘야한다. -->
+  <!-- 하지만 바벨 에서는 최신 문법인 import export를 쓰지 못해서 data-plugins...를 적어줘야한다. -->
+  <script data-plugins="transform-es2015-modules-umd" type="text/babel">
+
+    import Main from "./Main.js"
+
+    Main();
+  </script>
+</body>
+</html>
