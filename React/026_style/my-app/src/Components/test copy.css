@@ -1,0 +1,4 @@
+/* app.css가 아닌, test.css 이 파일의 스타일이 적용된다. */
+p {
+  color: blue;
+}
