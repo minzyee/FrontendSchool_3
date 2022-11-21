@@ -1,7 +1,6 @@
-// npm create-react-app my-app --template basic-react
+// npx create-react-app my-app --template basic-react
 // cd my-app
 // npm install react-router-dom
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
       {/* 라우트를 감싸줍니다. */}
       <Routes>
         <Route path="/" element={<Index />}/>
-        <Route path="/one" element={<One name='minzyee!  '/>}/>
+        <Route path="/one" element={<One name = 'licat' />}/>
         <Route path="/two" element={<Two />}/>
         <Route path="/three" element={<Three />}/>
       </Routes>
@@ -23,7 +22,8 @@ function Index(){
 }
 
 function One(props){
-  return <h1>{props.name}hello world1</h1>
+  console.log(props)
+  return <h1>{props.name} hello world1</h1>
 }
 
 function Two(){
