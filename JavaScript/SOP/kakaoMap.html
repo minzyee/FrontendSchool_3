@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kakao Map api 받아오기</title>
+
+  <!-- 실제 지도를 그리는 Javascript API를 불러오기 -->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a64e06babe6f6079af34351c07a3fabd"></script>
+</head>
+<body>
+  <!-- 지도를 담을 영역 만들기 -->
+  <div id="map" style="width:500px;height:400px;"></div>
+
+
+  <script>
+    // 지도를 띄우는 코드 작성
+    let container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    let options = { //지도를 생성할 때 필요한 기본 옵션
+      center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표. 여기에 원하는 위도 경도 입력하면 그곳으로 지도 중심이 이동한다.
+      level: 3 //지도의 레벨(확대, 축소 정도)
+    };
+
+    let map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+  </script>
+</body>
+</html>

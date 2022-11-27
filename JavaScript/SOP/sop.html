@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>hello sop!</h1>
+
+  <!-- iframe 태그에 test.html을 소스로 넣어 불러올 것이다. -->
+  <iframe class="test" src="./test.html" frameborder="0"></iframe>
+
+
+  <!-- 재현 강사님의 취향 잘 알겠습니다. -->
+  <iframe class="youtube" width="1083" height="609" src="https://www.youtube.com/embed/4TWR90KJl84" title="aespa 에스파 'Next Level' MV"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+
+  <script>
+    let x = document.querySelector(".test");
+    let y = document.querySelector(".youtube");
+
+    // 우리가 요청한 html document가 모두 로드가 완료가 되었을 때.
+    // DOM Tree 가 생성 될 때와 다르다. -> DOMContentloaded...
+    // contentDocument: 만약 iframe과 iframe's parent document가 같은 origin을 가진다면
+    // iframe의 document 객체를 반환한다.
+    x.addEventListener("load", () => {
+      console.log("same origin : ", x.contentDocument);
+      x.contentDocument.body.style.backgroundColor = "red";
+    });
+
+    y.addEventListener("load", () => {
+      console.log("same origin : ", y.contentDocument);
+      y.contentDocument.body.style.backgroundColor = "red";
+    });
+
+
+  </script>
+</body>
+</html>
