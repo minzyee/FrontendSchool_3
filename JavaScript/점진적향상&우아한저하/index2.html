@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <video src="">
+    <source src="test.mp4" type="video/mp4">
+    <source src="test.mwebm" type="video/webm">
+  </video>
+
+
+  <script>
+    const canvas = document.createElement("canvas");
+    const warning = document.createElement("strong");
+
+    const ctx = canvas.getContext("webgl");
+
+    if(ctx) {
+      document.body.appendChild(canvas);
+    } else {
+      warning.innerHTML = "이 사이트는 구형 브라우저에서 사용되고 있습니다. 브라우저를 업그레이드 좀 해조라 제발 !";
+      document.body.appendChild(warning);
+    }
+  </script>
+</body>
+</html>
