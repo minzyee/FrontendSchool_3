@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+</head>
+
+<body>
+  <style>
+    div {
+      display: inline-block;
+    }
+
+    .container {
+      border: 5px solid black;  /* 초기값을 위해 설정함 */
+      border-radius: 0px; /* 초기값을 위해 설정함 */
+      padding: 10px;
+      width: 100px;
+      height: 200px;
+      display: inline-block;
+    }
+  </style>
+
+  <button onclick="store.dispatch({type:'CHANGE_RADIUS', borderRadius:'0px'});">사각형</button>
+  <button onclick="store.dispatch({type:'CHANGE_RADIUS', borderRadius:'5%'});">둥근사각형</button>
+  <button onclick="store.dispatch({type:'CHANGE_RADIUS', borderRadius:'50%'});">원</button>
+
+  <br/><br/><br/>
+
+  <div id="one"></div>
+  <div id="two"></div>
+  <div id="three"></div>
+
+  <script>
+    // 1. 새로운 컴포넌트가 생성이 될 때, 코드가 늘어나지 않는다.
+    // 2. 새로운 컴포넌트 안에서만 코딩하면 된다.
+
+    // Redux는 cdn으로 생깁니다.
+    function reducer(state, action) {
+      if(state === undefined) {
+        return {
+          borderRadius: "0px" // 초기값 설정한거임
+        }
+      }
+
+      let newState;
+      if(action.type === "CHANGE_RADIUS") {
+        newState = {...state, borderRadius: action.borderRadius}
+      } return newState;
+    }
+
+    var store = Redux.createStore( // 스토어
+      reducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+      // redux dev tools를 사용하기 위한 코드
+    );
+
+
+    function one() {
+      let state = store.getState();
+      document.querySelector("#one").innerHTML = `
+        <div class="container" style="border-radius: ${state.borderRadius}"></div>
+      `;
+    }
+
+    store.subscribe(one);
+    one();
+
+    function two() {
+      let state = store.getState();
+      document.querySelector("#two").innerHTML = `
+        <div class="container" style="border-radius: ${state.borderRadius}"></div>
+      `;
+    }
+
+    store.subscribe(two);
+    two();
+
+    function three() {
+      let state = store.getState();
+      document.querySelector("#three").innerHTML = `
+        <div class="container" style="border-radius: ${state.borderRadius}"></div>
+      `;
+    }
+
+    store.subscribe(three);
+    three();
+  </script>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+    </head>
+
+    <body>
+        <style>
+            div {
+                display: inline-block;
+            }
+
+            .container {
+                border: 5px solid black;
+                border-radius: 0px;
+                padding: 10px;
+                width: 100px;
+                height: 200px;
+                display: inline-block;
+            }
+        </style>
+
+        <button
+            onclick="store.dispatch({type:'CHANGE_RADIUS', borderRadius:'0px'});"
+        >
+            사각형
+        </button>
+        <button
+            onclick="store.dispatch({type:'CHANGE_RADIUS', borderRadius:'5%'});"
+        >
+            둥근사각형
+        </button>
+        <button
+            onclick="store.dispatch({type:'CHANGE_RADIUS', borderRadius:'50%'});"
+        >
+            원
+        </button>
+
+        <br /><br /><br />
+
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div>
+
+        <script>
+            // Ctrl + D 눌러가면서 바꿔주세요.
+            function reducer(state, action) {
+                if (state === undefined) {
+                    return {
+                        borderRadius: "0px",
+                    };
+                }
+
+                var newState;
+                if (action.type === "CHANGE_RADIUS") {
+                    newState = { ...state, borderRadius: action.borderRadius };
+                }
+                return newState;
+            }
+
+            // Redux는 cdn으로 생깁니다.
+            var store = Redux.createStore(
+                reducer,
+                window.__REDUX_DEVTOOLS_EXTENSION__ &&
+                    window.__REDUX_DEVTOOLS_EXTENSION__() // redux dev tools를 사용하기 위한 코드
+            );
+
+            function one() {
+                var state = store.getState();
+                document.querySelector("#one").innerHTML = `
+                    <div class="container" style="border-radius:${state.borderRadius}"></div>
+                `;
+            }
+            store.subscribe(one);
+            one();
+
+            function two() {
+                var state = store.getState();
+                document.querySelector("#two").innerHTML = `
+                    <div class="container" style="border-radius:${state.borderRadius}"></div>
+                `;
+            }
+            store.subscribe(two);
+            two();
+
+            function three() {
+                var state = store.getState();
+                document.querySelector("#three").innerHTML = `
+                    <div class="container" style="border-radius:${state.borderRadius}"></div>
+                `;
+            }
+            store.subscribe(three);
+            three();
+        </script>
+    </body>
+</html> -->
