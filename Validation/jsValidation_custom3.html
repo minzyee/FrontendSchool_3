@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    사용자가 입력한 비밀번호를 벨리데이션하는 폼을 만들어 봅시다.
+    input은 비밀번호, 비밀번호 확인 두 가지가 있어야하며
+    
+    이때 만약 
+    1. input에 아무것도 입력하지 않았거나
+    2. 비밀번호 input과 비밀번호 확인 input의 값이 동일하지 않거나,
+    3. 비밀번호의 패턴이 정규표현식과 일치하지 않은 경우
+    
+    에러메시지를 출력하도록 만들어보세요
+
+    // 비밀번호 패턴
+    pattern="(?=.*[!@#$%^&*()_+=-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+  -->
+  <form action="">
+    <label for="pw">비밀번호 입력: </label>
+    <input type="password" id="pw" required pattern="(?=.*[!@#$%^&*()_+=-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"><br/>
+
+    <label for="cp_pw">비밀번호 확인: </label>
+    <input type="password" id="cp_pw" required pattern="(?=.*[!@#$%^&*()_+=-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"><br/>
+
+    <button type="submit">가입하기</button>
+  </form>
+
+  <script>
+    const pw = document.querySelectorAll('#pw');
+    const cp_pw = document.querySelectorAll('#cp_pw');
+    const btn = document.querySelector('button');
+
+    function pwValidate(target) {
+      if(pw.values === cp_pw.values) { // target.validate
+        target.setCustomValidity('아무것도 입력되지 않았다구요우!');
+
+      }
+    }
+
+
+
+    // function validate(target) {
+    //   if (target.validity.valueMissing) {
+    //     target.setCustomValidity('아무것도 입력되지 않았다구요우!');
+    //   } else if (target.validity.typeMismatch) {
+    //     target.setCustomValidity('입력 값의 타입이 틀려먹었습니다.');
+    //   } else {
+    //     target.setCustomValidity('');
+    //   }
+    // }
+
+</script>
+</body>
+</html>
